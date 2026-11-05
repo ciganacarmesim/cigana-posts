@@ -53,6 +53,16 @@ footer{background:#24050C;color:#F1DCCB;font-size:14px;line-height:1.5;padding:2
 .fixo{position:fixed;left:0;right:0;bottom:0;padding:10px 14px;background:rgba(36,5,12,.96);display:none}
 .fixo .btn{font-size:19px;padding:14px}
 @media (min-width:700px){.hero h1{font-size:46px}}
+
+.hl{background:#8E1B2C;color:#fff;padding:0 .28em;border-radius:6px;box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:nowrap}
+.pulse{position:relative;overflow:hidden;animation:pulse 2.4s ease-in-out infinite}
+.pulse:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.45) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 6px 0 #16733F,0 0 0 0 rgba(30,142,78,.45)}50%{transform:scale(1.03);box-shadow:0 6px 0 #16733F,0 0 0 10px rgba(30,142,78,0)}}
+@keyframes shine{0%,60%{left:-60%}85%,100%{left:130%}}
+.seta{display:block;text-align:center;font-size:30px;margin:4px 0 2px;animation:seta 1.6s ease-in-out infinite}
+@keyframes seta{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+.hero .hl{background:#FFF8EE;color:#6E1423}
+@media (prefers-reduced-motion:reduce){.pulse,.pulse:after,.seta{animation:none}}
 </style>
 </head>
 <body>
@@ -61,9 +71,9 @@ footer{background:#24050C;color:#F1DCCB;font-size:14px;line-height:1.5;padding:2
   <div class="wrap">
     <span class="tag">🔮 Cigana Carmesim</span>
     <h1>O Caderninho da Cigana</h1>
-    <p class="sub"><b>101 simpatias</b> para o dinheiro, a proteção e o amor, com o que você já tem em casa e com <b>letra grande</b>.</p>
+    <p class="sub"><span class="hl">101 simpatias</span> para o dinheiro, a proteção e o amor, com o que você já tem em casa e com <span class="hl">letra grande</span>.</p>
     <div class="video"><video src="video.mp4" poster="img/capa.jpg" autoplay muted loop playsinline></video></div>
-    <a class="btn" href="https://pay.kiwify.com.br/EyQFRiv">Quero meu Caderninho<small>R$ 47 · acesso na hora pelo celular</small></a>
+    <a class="btn pulse" href="https://pay.kiwify.com.br/EyQFRiv">Quero meu Caderninho<small>R$ 47 · acesso na hora pelo celular</small></a>
     <p class="seguro">🔒 Pagamento seguro pela Kiwify · Pix ou cartão</p>
   </div>
 </header>
@@ -118,7 +128,8 @@ footer{background:#24050C;color:#F1DCCB;font-size:14px;line-height:1.5;padding:2
     <p>O Caderninho da Cigana completo</p>
     <p class="val"><span>R$</span> 47</p>
     <p class="det">Pagamento único · Pix ou cartão · você recebe o acesso por e-mail na hora</p>
-    <a class="btn" href="https://pay.kiwify.com.br/EyQFRiv">Quero meu Caderninho</a>
+    <span class="seta">👇</span>
+    <a class="btn pulse" href="https://pay.kiwify.com.br/EyQFRiv">Quero meu Caderninho</a>
   </div>
   <div class="garantia"><span class="ic">🛡️</span><p><b>7 dias de garantia.</b> Se não gostar, é só pedir o reembolso pela Kiwify dentro de 7 dias. Sem pergunta e sem complicação.</p></div>
 </div></section>

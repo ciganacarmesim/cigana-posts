@@ -37,6 +37,15 @@ h1,h2{font-family:Lora,Georgia,serif;font-weight:700;line-height:1.15;color:#4A0
 .btn-presente{background:#fff;color:#4A0E1A;border:3px solid #4A0E1A;font-size:21px}
 .nota{font-size:14px;color:#5A3A36;margin-top:10px}
 footer{background:#24050C;color:#F1DCCB;font-size:13px;line-height:1.5;padding:22px 0 30px;text-align:center}
+
+.hl{background:#8E1B2C;color:#fff;padding:0 .28em;border-radius:6px;box-decoration-break:clone;-webkit-box-decoration-break:clone;white-space:nowrap}
+.pulse{position:relative;overflow:hidden;animation:pulse 2.4s ease-in-out infinite}
+.pulse:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.45) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);box-shadow:0 6px 0 #16733F,0 0 0 0 rgba(30,142,78,.45)}50%{transform:scale(1.03);box-shadow:0 6px 0 #16733F,0 0 0 10px rgba(30,142,78,0)}}
+@keyframes shine{0%,60%{left:-60%}85%,100%{left:130%}}
+.seta{display:block;text-align:center;font-size:30px;margin:4px 0 2px;animation:seta 1.6s ease-in-out infinite}
+@keyframes seta{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.pulse,.pulse:after,.seta{animation:none}}
 </style>
 </head>
 <body>
@@ -49,7 +58,7 @@ footer{background:#24050C;color:#F1DCCB;font-size:13px;line-height:1.5;padding:2
   <section class="oferta">
     <span class="kick">📖 Para quem quer mais</span>
     <h2>O Caderninho da Cigana</h2>
-    <p>As 5 do presente são só o começo. No meu Caderninho estão <b>101 simpatias</b>, com o mesmo passo a passo e letra grande:</p>
+    <p>As 5 do presente são só o começo. No meu Caderninho estão <span class="hl">101 simpatias</span>, com o mesmo passo a passo e <span class="hl">letra grande</span>:</p>
     <ul class="lista">
       <li>💰 34 de dinheiro e trabalho</li>
       <li>🧿 40 de proteção da casa, da família e do corpo</li>
@@ -62,12 +71,13 @@ footer{background:#24050C;color:#F1DCCB;font-size:13px;line-height:1.5;padding:2
     </div>
     <p class="preco">R$ 47</p>
     <p class="det">Pagamento único · Pix ou cartão · 7 dias de garantia pela Kiwify</p>
-    <a class="btn btn-verde" href="https://pay.kiwify.com.br/EyQFRiv">Quero o Caderninho completo<small>acesso na hora pelo celular</small></a>
+    <span class="seta">👇</span>
+    <a class="btn btn-verde pulse" href="https://pay.kiwify.com.br/EyQFRiv">Quero o Caderninho completo<small>acesso na hora pelo celular</small></a>
     <a class="mais" href="../caderninho/">Ver tudo o que tem dentro →</a>
   </section>
 
   <section class="presente">
-    <h2>🎁 O seu presente grátis</h2>
+    <h2>🎁 O seu presente <span class="hl">grátis</span></h2>
     <p>5 simpatias da cozinha para o dinheiro parar de escorrer (PDF).</p>
     <a class="btn btn-presente" href="https://cdn.jsdelivr.net/gh/ciganacarmesim/cigana-posts@main/presentes/Mini-Grimorio-Prosperidade.pdf">Baixar meu presente grátis</a>
     <p class="nota">É de graça mesmo, não precisa cadastro. No Android, toque em "Abrir" ou "Baixar".</p>
