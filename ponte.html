@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><title>ponte</title><body>ponte
+<script>
+(async()=>{const u=new URLSearchParams(location.search).get('u');
+try{const r=await fetch(u);const b=await r.blob();
+window.opener.postMessage({ponte:1,name:u.split('/').pop(),type:b.type||'video/mp4',blob:b},'*');document.body.textContent='ok '+b.size;}
+catch(e){window.opener&&window.opener.postMessage({ponte:1,erro:String(e)},'*');document.body.textContent='erro '+e}})();
+</script>
